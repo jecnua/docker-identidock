@@ -10,6 +10,5 @@ COPY cmd.sh /
 
 EXPOSE 9090 9191
 USER uwsgi
-ENV "DEV"
 
 CMD ["/cmd.sh"]
