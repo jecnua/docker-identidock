@@ -7,8 +7,9 @@ RUN groupadd -r uwsgi && \
 WORKDIR /app
 COPY app /app
 COPY cmd.sh /
+RUN ["chown", "uwsgi:uwsgi", "/cmd.sh"]
 
 EXPOSE 9090 9191
 USER uwsgi
 
-CMD ["/cmd.sh"]
+ENTRYPOINT ["/cmd.sh"]
