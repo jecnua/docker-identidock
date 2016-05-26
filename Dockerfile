@@ -1,6 +1,7 @@
 FROM python:3.4
 
-RUN pip install Flask
+RUN pip install --upgrade pip && \
+  pip install Flask
 WORKDIR /app
 COPY app /app
 
